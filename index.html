@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- DEMO: keep noindex until commissioned -->
+<title>ER Automotive — Auto Repair in Wasilla, AK | DEMO</title>
+<meta name="description" content="DEMO website concept for ER Automotive, Wasilla AK — honest auto repair on the Parks Highway.">
+<meta name="theme-color" content="#0f2740">
+<style>
+:root{
+  --navy:#0f2740; --navy2:#1b3a5c; --accent:#e8792b; --accent-dark:#c25f17;
+  --paper:#f7f5f1; --ink:#1c1c1c; --ok:#2e7d32;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.demo-banner{background:repeating-linear-gradient(45deg,#ffd54f,#ffd54f 12px,#212121 12px,#212121 24px);padding:3px}
+.demo-banner p{background:#212121;color:#ffd54f;text-align:center;font-weight:700;font-size:.85rem;padding:.55rem .75rem;letter-spacing:.03em}
+header{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.logo{font-size:1.35rem;font-weight:800;letter-spacing:.02em}
+.logo span{color:var(--accent)}
+.call-top{background:var(--accent);color:#151515;font-weight:800;text-decoration:none;padding:.55rem 1rem;border-radius:6px}
+.call-top:hover,.call-top:focus{background:#ffd54f}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%);color:#fff;padding:3rem 1.25rem 4rem;text-align:center}
+.hero h1{font-size:clamp(1.7rem,5vw,2.8rem);line-height:1.2;max-width:38rem;margin:0 auto .75rem}
+.hero p{max-width:34rem;margin:0 auto 1.5rem;color:#dbe6f2}
+.cta{display:inline-block;background:var(--accent);color:#151515;font-weight:800;font-size:1.1rem;text-decoration:none;padding:.9rem 1.6rem;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.cta:hover,.cta:focus{background:#ffd54f}
+.hero-svg{max-width:520px;width:92%;margin:2.2rem auto 0;display:block}
+.svg-caption{font-size:.75rem;color:#9fb4ca;margin-top:.4rem}
+section{padding:2.75rem 1.25rem;max-width:60rem;margin:0 auto}
+h2{font-size:1.6rem;color:var(--navy);margin-bottom:1rem}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.card{background:#fff;border-radius:10px;padding:1.25rem;box-shadow:0 2px 8px rgba(15,39,64,.08);border-top:4px solid var(--accent)}
+.card h3{color:var(--navy);margin-bottom:.4rem;font-size:1.05rem}
+.card p{font-size:.95rem}
+.why{background:#fff}
+.why-wrap{max-width:60rem;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.why-item{display:flex;gap:.6rem;align-items:flex-start}
+.check{color:var(--ok);font-weight:900;font-size:1.2rem;line-height:1.3}
+.hours-nap{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.hours-nap table{border-collapse:collapse;width:100%}
+.hours-nap td{padding:.3rem .5rem;border-bottom:1px solid #e4ded4;font-size:.95rem}
+.quote{background:var(--navy);color:#fff}
+.quote-inner{max-width:34rem;margin:0 auto}
+.quote h2{color:#fff}
+.quote label{display:block;font-weight:600;margin:.8rem 0 .25rem;font-size:.95rem}
+.quote input,.quote textarea{width:100%;padding:.65rem;border:none;border-radius:6px;font:inherit}
+.quote button{margin-top:1.1rem;width:100%;background:var(--accent);color:#151515;font-weight:800;font-size:1.05rem;border:none;padding:.9rem;border-radius:8px;cursor:pointer}
+.quote button:hover{background:#ffd54f}
+.quote small{display:block;margin-top:.6rem;color:#b9c9db}
+footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem 5.5rem;font-size:.85rem}
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--accent);text-align:center;padding:.85rem;z-index:50;box-shadow:0 -3px 12px rgba(0,0,0,.25)}
+.sticky-call a{color:#151515;font-weight:800;text-decoration:none;font-size:1.05rem}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:480px){.hero{padding:2.2rem 1rem 3rem}section{padding:2rem 1rem}}
+</style>
+</head>
+<body>
+
+<div class="demo-banner"><p>DEMO — built for ER Automotive by a local web designer. Not yet commissioned by the business. Info below is from public listings — please verify.</p></div>
+
+<header>
+  <div class="logo">ER <span>Automotive</span></div>
+  <!-- JUAN: verify phone with owner before commissioning -->
+  <a class="call-top" href="tel:+19077754267">📞 907-775-4267</a>
+</header>
+
+<section class="hero" style="max-width:none">
+  <h1>Honest Auto Repair on the Parks Highway</h1>
+  <p>Wasilla's local shop for diagnostics, brakes, engine work, and keeping Alaska rigs on the road — summer and forty-below.</p>
+  <a class="cta" href="tel:+19077754267">Call for an Estimate</a>
+  <!-- Animated inline SVG: mechanic + truck on lift. Illustration, not a photo. -->
+  <svg class="hero-svg" viewBox="0 0 520 260" role="img" aria-label="Illustration of a mechanic working on a pickup truck on a lift">
+    <rect x="0" y="220" width="520" height="8" fill="#0a1b2e"/>
+    <!-- lift posts -->
+    <rect x="90" y="120" width="14" height="100" fill="#37516e"/>
+    <rect x="416" y="120" width="14" height="100" fill="#37516e"/>
+    <rect x="80" y="150" width="360" height="10" fill="#4a698c">
+      <animate attributeName="y" values="150;140;150" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <!-- truck body -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0" dur="6s" repeatCount="indefinite"/>
+      <rect x="130" y="100" width="260" height="45" rx="8" fill="#e8792b"/>
+      <rect x="150" y="70" width="120" height="40" rx="6" fill="#e8792b"/>
+      <rect x="160" y="76" width="46" height="26" rx="3" fill="#cfe3f5"/>
+      <rect x="214" y="76" width="46" height="26" rx="3" fill="#cfe3f5"/>
+      <circle cx="180" cy="150" r="22" fill="#1c1c1c"/><circle cx="180" cy="150" r="10" fill="#8fa6bd"/>
+      <circle cx="340" cy="150" r="22" fill="#1c1c1c"/><circle cx="340" cy="150" r="10" fill="#8fa6bd"/>
+    </g>
+    <!-- mechanic -->
+    <g>
+      <circle cx="460" cy="176" r="12" fill="#e0b18a"/>
+      <rect x="448" y="188" width="24" height="32" rx="6" fill="#2e5f8a"/>
+      <rect x="440" y="192" width="12" height="5" rx="2" fill="#e0b18a">
+        <animateTransform attributeName="transform" type="rotate" values="0 452 194;-20 452 194;0 452 194" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <!-- wrench sparkle -->
+    <circle cx="432" cy="185" r="3" fill="#ffd54f">
+      <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </svg>
+  <p class="svg-caption">Illustration — real shop photos coming soon</p>
+</section>
+
+<section class="reveal">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card"><h3>Diagnostics</h3><p>Check-engine lights, electrical gremlins, no-start mornings — find it before it strands you.</p></div>
+    <div class="card"><h3>Brakes &amp; Suspension</h3><p>Pads, rotors, struts, and steering — built for frost heaves and gravel roads.</p></div>
+    <div class="card"><h3>Engine &amp; Transmission</h3><p>From tune-ups to major repair on trucks, SUVs, and daily drivers.</p></div>
+    <div class="card"><h3>Winterization</h3><p>Block heaters, batteries, coolant, and cold-weather prep for Alaska winters.</p></div>
+  </div>
+  <!-- JUAN: confirm actual service list with owner — these are typical shop services, not verified claims -->
+</section>
+
+<section class="why reveal" style="max-width:none">
+  <div class="why-wrap">
+    <h2 style="grid-column:1/-1">Why a local shop?</h2>
+    <div class="why-item"><span class="check">✓</span><p>Talk straight to the people working on your vehicle</p></div>
+    <div class="why-item"><span class="check">✓</span><p>On the Parks Highway — easy drop-off in Wasilla</p></div>
+    <div class="why-item"><span class="check">✓</span><p>Estimates before work begins</p></div>
+    <div class="why-item"><span class="check">✓</span><p>Your money stays in the Valley</p></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Hours &amp; Location</h2>
+  <div class="hours-nap">
+    <div>
+      <!-- JUAN: ADDRESS CONFLICT in public listings (601 vs 3802 W Parks Hwy) — verify with owner -->
+      <p><strong>ER Automotive</strong><br>W Parks Highway, Wasilla, AK 99654<br>
+      <a href="tel:+19077754267">907-775-4267</a></p>
+      <p style="margin-top:.75rem"><em>Hours and address from public listings — call to confirm.</em></p>
+    </div>
+    <div>
+      <table>
+        <tr><td>Mon–Fri</td><td>9:00 am – 5:00 pm</td></tr>
+        <tr><td>Saturday</td><td>10:30 am – 2:00 pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="quote reveal" style="max-width:none">
+  <div class="quote-inner">
+    <h2>Request an Estimate</h2>
+    <!-- DEMO: form disabled. On commission: action="https://formsubmit.co/OWNER_EMAIL" method="POST" -->
+    <form onsubmit="alert('Demo form — not connected yet. On the live site this goes straight to the shop\'s email.');return false">
+      <label for="n">Name</label><input id="n" name="name" required>
+      <label for="p">Phone</label><input id="p" name="phone" type="tel" required>
+      <label for="m">What's going on with your vehicle?</label><textarea id="m" name="message" rows="4" required></textarea>
+      <button type="submit">Send Request</button>
+      <small>Demo form — not connected. The live version emails the shop directly.</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>DEMO concept site — not commissioned by ER Automotive. Built by a Wasilla-local web designer as a free preview.</p>
+  <p>Business info sourced from public directories; no affiliation implied.</p>
+</footer>
+
+<div class="sticky-call"><a href="tel:+19077754267">📞 Tap to Call — 907-775-4267</a></div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')),2500);// safety: never leave content hidden
+</script>
+</body>
+</html>
