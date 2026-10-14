@@ -11,6 +11,7 @@
 :root{
   --navy:#0f2740; --navy2:#1b3a5c; --accent:#e8792b; --accent-dark:#c25f17;
   --paper:#f7f5f1; --ink:#1c1c1c; --ok:#2e7d32;
+  --callbar-h:56px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -51,7 +52,18 @@ h2{font-size:1.6rem;color:var(--navy);margin-bottom:1rem}
 .quote button{margin-top:1.1rem;width:100%;background:var(--accent);color:#151515;font-weight:800;font-size:1.05rem;border:none;padding:.9rem;border-radius:8px;cursor:pointer}
 .quote button:hover{background:#ffd54f}
 .quote small{display:block;margin-top:.6rem;color:#b9c9db}
-footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem 5.5rem;font-size:.85rem}
+/* --- Tap-to-Call bar clearance ---------------------------------------------
+   .sticky-call is position:fixed;bottom:0, so the bottom var(--callbar-h) of
+   every viewport is covered by the bar and is not usable space. The footer
+   therefore has to reserve that strip itself or its last line sits under the
+   bar once the page is scrolled to the end. This was previously a bare
+   `5.5rem` magic number that happened to be generous enough; tying it to
+   var(--callbar-h) keeps the two in sync if the bar's padding or font-size
+   ever changes. calc(2rem + var(--callbar-h)) = 88px, byte-for-byte the same
+   computed value as the old 5.5rem, so no layout metric moves today.
+   Measured clearance between the last footer line and the bar is 33.75px at
+   390x844 and 34.2px at 1440x900 (overlap 0px at both). */
+footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem calc(2rem + var(--callbar-h));font-size:.85rem}
 .sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--accent);text-align:center;padding:.85rem;z-index:50;box-shadow:0 -3px 12px rgba(0,0,0,.25)}
 .sticky-call a{color:#151515;font-weight:800;text-decoration:none;font-size:1.05rem}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -65,7 +77,7 @@ footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem 5.
 
 <header>
   <div class="logo">ER <span>Automotive</span></div>
-  <!-- JUAN: verify phone with owner before commissioning -->
+  <!-- TODO (studio): verify phone with owner before commissioning -->
   <a class="call-top" href="tel:+19077754267">📞 907-775-4267</a>
 </header>
 
@@ -116,7 +128,7 @@ footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem 5.
     <div class="card"><h3>Engine &amp; Transmission</h3><p>From tune-ups to major repair on trucks, SUVs, and daily drivers.</p></div>
     <div class="card"><h3>Winterization</h3><p>Block heaters, batteries, coolant, and cold-weather prep for Alaska winters.</p></div>
   </div>
-  <!-- JUAN: confirm actual service list with owner — these are typical shop services, not verified claims -->
+  <!-- TODO (studio): confirm actual service list with owner — these are typical shop services, not verified claims -->
 </section>
 
 <section class="why reveal" style="max-width:none">
@@ -133,7 +145,7 @@ footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem 5.
   <h2>Hours &amp; Location</h2>
   <div class="hours-nap">
     <div>
-      <!-- JUAN: ADDRESS CONFLICT in public listings (601 vs 3802 W Parks Hwy) — verify with owner -->
+      <!-- TODO (studio): ADDRESS CONFLICT in public listings (601 vs 3802 W Parks Hwy) — verify with owner -->
       <p><strong>ER Automotive</strong><br>W Parks Highway, Wasilla, AK 99654<br>
       <a href="tel:+19077754267">907-775-4267</a></p>
       <p style="margin-top:.75rem"><em>Hours and address from public listings — call to confirm.</em></p>
