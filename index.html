@@ -68,21 +68,25 @@ h2{font-size:1.6rem;color:var(--navy);margin-bottom:1rem}
 footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem calc(2rem + var(--callbar-h));font-size:.85rem}
 .sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--accent);text-align:center;padding:.85rem;z-index:50;box-shadow:0 -3px 12px rgba(0,0,0,.25)}
 .sticky-call a{color:#151515;font-weight:800;text-decoration:none;font-size:1.05rem}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
+html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.in{opacity:1;transform:none}
 @media (max-width:480px){.hero{padding:2.2rem 1rem 3rem}section{padding:2rem 1rem}}
 @media (prefers-reduced-motion: reduce){.hero h1,.hero p,.hero .cta,.reveal{opacity:1!important;transform:none!important;animation:none!important}}
 </style>
+<link rel="stylesheet" href="compliance.css">
+<script>document.documentElement.classList.add("js");setTimeout(function(){document.querySelectorAll(".reveal").forEach(function(e){e.classList.add("in")})},2200);document.addEventListener("DOMContentLoaded",function(){if(matchMedia("(prefers-reduced-motion: reduce)").matches){document.querySelectorAll("svg").forEach(function(s){if(s.pauseAnimations)s.pauseAnimations()})}});</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div class="demo-banner"><p>UNSOLICITED DEMO by Digital Consulting Studios — not commissioned by or affiliated with ER Automotive. Public-listing details only; call to confirm.</p></div>
+<div class="demo-banner"><p>Demo design preview — not the official business website<br>UNSOLICITED DEMO by Digital Consulting Studios — not commissioned by or affiliated with ER Automotive. Public-listing details only; call to confirm.</p></div>
 
 <header>
   <div class="logo">ER <span>Automotive</span></div>
   <a class="call-top" href="tel:+19077754267">📞 907-775-4267</a>
 </header>
 
+<main id="main">
 <section class="hero" style="max-width:none">
   <h1>ER Automotive · Wasilla, Alaska</h1>
   <p>Listed publicly as an auto repair shop on West Parks Highway. Call to confirm the location, services and availability before visiting.</p>
@@ -159,19 +163,21 @@ footer{background:#0a1b2e;color:#8fa6bd;text-align:center;padding:1.5rem 1rem ca
 <section class="quote reveal" style="max-width:none">
   <div class="quote-inner">
     <h2>Demo inquiry form</h2>
-    <form onsubmit="alert('Demo only. Nothing is sent or stored.');return false">
-      <label for="n">Name</label><input id="n" name="name" required>
-      <label for="p">Phone</label><input id="p" name="phone" type="tel" required>
-      <label for="m">What's going on with your vehicle?</label><textarea id="m" name="message" rows="4" required></textarea>
-      <button type="submit">Demo only — does not send</button>
-      <small>Layout preview only. This form does not send a request or book any service. Do not enter personal information.</small>
+    <form class="reveal" aria-describedby="demo-form-note" onsubmit="return false">
+      <label for="n">Name</label><input disabled id="n" name="name" required>
+      <label for="p">Phone</label><input disabled id="p" name="phone" type="tel" required>
+      <label for="m">What's going on with your vehicle?</label><textarea disabled id="m" name="message" rows="4" required></textarea>
+      <button disabled type="submit">Demo only — does not send</button>
+      <small id="demo-form-note">Disabled demonstration form. Layout preview only. This form does not send a request or book any service. Do not enter personal information. <a href="privacy.html">Privacy notice</a> · <a href="terms.html">Terms of use</a>.</small>
     </form>
   </div>
 </section>
 
+</main>
 <footer>
   <p>Unsolicited concept by Digital Consulting Studios — not commissioned by, affiliated with or endorsed by ER Automotive.</p>
   <p>Public-listing details retrieved October 16, 2026. Services, guarantees, prices and current opening hours are not confirmed.</p>
+<nav class="legal-nav" aria-label="Preview policies"><a href="index.html">Design preview</a> · <a href="privacy.html">Privacy notice</a> · <a href="terms.html">Terms of use</a></nav><p>Design preview © 2026 Digital Consulting Studios; third-party rights remain with their owners.</p>
 </footer>
 
 <div class="sticky-call"><a href="tel:+19077754267">📞 Tap to Call — 907-775-4267</a></div>
